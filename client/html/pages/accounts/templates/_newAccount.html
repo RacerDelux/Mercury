@@ -1,0 +1,38 @@
+<template name="newAccount">
+  <div class="container">
+  <div class="progress">
+    <div class="determinate" style="width: {{pagePercent}}%;"></div>
+    Step
+    {{session "page"}}
+    of
+    {{session "pageCount"}}
+  </div>
+  <div class="outer-form">
+
+    <div class="page" style="{{#unless pageIs 1}}display: none;{{/unless}}" isactive="{{#if pageIs 1}}true{{/if}}">
+      {{#autoForm collection="NewUserP1" id="FormNewAccountP1" doc=fetchForm.[0] type=formType.[0]}}
+        <p>User Information</p>
+        <div class="card-content">
+          {{> afQuickField name="firstName"}}
+          {{> afQuickField name="lastName"}}
+          {{> afQuickField name="email"}}
+          {{> afQuickField name="company"}}
+        </div>
+      {{/autoForm}}
+    </div>
+    <div class="card-content page" style="{{#unless pageIs 2}}display: none;{{/unless}}" isactive="{{#if pageIs 2}}true{{/if}}">
+      {{#autoForm collection="NewUserP2" id="FormNewAccountP2" doc=fetchForm.[1] type=formType.[1]}}
+      <div class="card-content">
+        {{> afQuickField name="country"}}
+        {{> afQuickField name="website"}}
+      </div>
+      {{/autoForm}}
+    </div>
+    <div class="card-content page" style="{{#unless pageIs 3}}display: none;{{/unless}}" isactive="{{#if pageIs 3}}true{{/if}}">
+      Review Content
+      <div id="submitall">CLICK ME</div>
+    </div>
+
+  </div>
+</div>
+</template>

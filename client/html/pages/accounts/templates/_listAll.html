@@ -1,0 +1,22 @@
+<template name="listAll">
+  <ul class="collection with-header">
+    <li class="collection-header">Accounts</li>
+    <li class="collection-header">Users</li>
+    {{#each listUsers}}
+      <li class="collection-item">
+          <img src="{{profile.image}}" alt="" class="circle profile-image">
+          <a>
+            <div class="collection-name">
+              {{profile.firstName}} {{profile.lastName}}
+            </div>
+          </a>
+          <a class="secondary-content">
+            {{#each profile.roles}}
+              <div class="label label-{{this}}">{{this}}</div>
+            {{/each}}
+          </a>
+
+      </li>
+    {{/each}}
+  </ul>
+</template>

@@ -1,0 +1,50 @@
+<template name="accounts">
+  {{#if showModal}}
+    {{#if whatForm "user"}}
+      {{>newUser}}
+    {{/if}}
+    {{#if whatForm "account"}}
+      {{>newAccount}}
+    {{/if}}
+  {{else}}
+    {{>listAll}}
+  {{/if}}
+  {{#contentFor "bottomNav"}}
+    {{#if showModal}}
+    <div class="nav-icon" id="newPageBack">
+      <span id="icon-back" class="fa fa-arrow-circle-left menu-icon"></span>
+    </div>
+      <div class="nav-icon" id="newCancel">
+        <span class="fa fa-times-circle menu-icon"></span>
+      </div>
+      <div class="nav-icon" id="newPageNext">
+        <span id="icon-next" class="fa fa-arrow-circle-right menu-icon"></span>
+      </div>
+    {{else}}
+      <div class="nav-icon" id="newUserForm">
+        <span class="fa-stack menu-icon">
+          <i class="fa fa-user fa-stack-1x awesomeEntity"></i>
+          <i class="fa fa-plus fa-stack-1x awesomeAction"></i>
+        </span>
+      </div>
+      <div class="nav-icon" id="newAccountForm">
+        <span class="fa-stack menu-icon">
+          <i class="fa fa-archive fa-stack-1x awesomeEntity"></i>
+          <i class="fa fa-plus fa-stack-1x awesomeAction"></i>
+        </span>
+      </div>
+    {{/if}}
+  {{/contentFor}}
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Continue?</h4>
+      <p>It appears that you have an unfinsihed form. <br/>Would you like to continue? Hitting no will erase any progress.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" id="nocontinue" class="waves-effect waves-green btn-flat">No</a>
+      <a href="#" id="continue" class="waves-effect waves-green btn-flat">Yes</a>
+    </div>
+  </div>
+</template>

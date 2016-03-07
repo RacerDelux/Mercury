@@ -1,0 +1,136 @@
+/* CSS declarations go here */
+
+
+/*@media screen and (min-width: 800px) {
+  .container-fluid {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 799px) {
+  .container-fluid {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}*/
+
+.outer-form {
+  padding-top: 1em;
+}
+.nav-icon {
+  display: inline;
+}
+.nav-icon .disabled {
+  color: #b8b8b8;
+}
+.menu-icon {
+  padding-left: .5ch;
+  padding-right: .5ch;
+  font-size: 2.5em;
+  vertical-align: middle;
+  line-height: 56px;
+  color: #ebebeb;
+  display: inline-block;
+}
+.profile-image {
+  width: 3em;
+  vertical-align: bottom;
+  margin-right: 1em;
+  border: 1px solid #f47730;
+}
+.collection-name {
+  display: inline-block;
+  padding-top: .75em;
+  padding-bottom: .75em;
+}
+.collection-item {
+  padding-left: 1em !important;
+}
+.collection-header {
+  text-align: -webkit-center;
+  font-weight: bolder;
+  background-color: #d4d4d4 !important;
+}
+.secondary-content {
+  padding-top: .75em;
+  padding-bottom: .75em;
+}
+
+/** Badges **/
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  height: auto;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: .25em;
+  text-transform: capitalize;
+}
+.label-admin {
+  background-color: #f04646;
+}
+.label-user {
+  background-color: #4991dd;
+}
+
+/** End Badges **/
+
+.navbar-center {
+  text-align: center;
+  margin: auto;
+}
+.navbar {
+  background-color: #10a69d;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  height: 56px;
+  background-color: #10a69d;
+}
+main {
+  padding-bottom: 56px;
+}
+
+/* Side Bar */
+
+.drag-target {
+  width: 5%;
+}
+
+/* Progress Bar */
+
+.progress {
+  margin-top: 0;
+  position: fixed;
+  left: 0;
+  top: 56px;
+  border-radius: 0;
+  background-color: #f9be9d;
+}
+.progress .determinate {
+  background-color: #f47730;
+}
+
+/* Font Awesome Style Additions */
+
+.awesomeEntity, .awesomeAction {
+  color: #ebebeb;
+}
+.awesomeEntity {
+  /*text-shadow: 2px 3px 5px black;*/
+}
+.awesomeAction {
+  font-size: 80%;
+  margin: 8% 0px 0px 23%;
+  -webkit-text-stroke: 1.5px #10a69d;
+  /*-webkit-text-stroke: 2px #6d6e71;*/
+  /*text-shadow: -1px 0 black, 0 2px 3px black, 2px 0 3px black, 0 -1px black;*/
+}

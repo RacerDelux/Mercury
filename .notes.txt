@@ -1,0 +1,3 @@
+Framework: https://www.meteor.com/
+Icons: http://fortawesome.github.io/Font-Awesome/icons/
+Routing: http://iron-meteor.github.io/iron-router/

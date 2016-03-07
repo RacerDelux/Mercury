@@ -1,0 +1,30 @@
+
+<head>
+  <meta content="on" http-equiv="cleartype">
+  <meta content="320" name="MobileOptimized">
+  <meta content="True" name="HandheldFriendly">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon">
+  <link href="/favicon.ico?v=2" rel="icon" type="image/x-icon">
+  <title>Hot Swap</title>
+</head>
+
+
+<template name="ApplicationLayout">
+
+  {{#if currentUser}}
+    {{> header}}
+    <main>
+      {{#if showSpinner}}
+        {{> spinner}}
+      {{/if}}
+      {{> yield}}
+    </main>
+    {{>footer}}
+  {{else}}
+    {{>login}}
+  {{/if}}
+
+</template>
