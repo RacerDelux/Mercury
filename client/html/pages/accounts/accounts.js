@@ -7,6 +7,7 @@ Template.accounts.onRendered(function () {
 });
 Template.accounts.events({
     'click #continue': function () {
+        console.log();
         toggleSpinner(true);
         //show modal for account creation
         $('#modal1').closeModal({
@@ -66,8 +67,8 @@ setUpForm = function (type) {
         //show modal for account creation
         Session.set('showCreateModal', true);
     } else {
-        var loadDoc = Session.get('docLoad');
-        var loadType = Session.get('existingDoc');
+        var loadType = Session.get('docLoad');
+        var loadDoc = Session.get('existingDoc');
         //There is a form here - lets load in all pages and set session variable
         $.each(Form[type], function (index) {
             var formPart = Form[type][index].findOne({userId: Meteor.userId()});
