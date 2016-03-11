@@ -10,7 +10,7 @@
   <div class="outer-form">
 
     <div class="card-content page" style="{{#unless pageIs 1}}display: none;{{/unless}}" isactive="{{#if pageIs 1}}true{{/if}}">
-      {{#autoForm collection="NewUserP1" id="FormNewUserP1" doc=fetchForm.[0] type=formType.[0]}}
+      {{#autoForm collection="NewUserP1" id="FormNewUserP1" doc=fetchForm.[0] type=(formType 0)}}
         <p>User Information</p>
         <div class="card-content">
           {{> afQuickField name="firstName"}}
@@ -21,7 +21,7 @@
       {{/autoForm}}
     </div>
     <div class="card-content page" style="{{#unless pageIs 2}}display: none;{{/unless}}" isactive="{{#if pageIs 2}}true{{/if}}">
-      {{#autoForm collection="NewUserP2" id="FormNewUserP2" doc=fetchForm.[1] type=formType.[1]}}
+      {{#autoForm collection="NewUserP2" id="FormNewUserP2" doc=fetchForm.[1] type=(formType 1)}}
       <div class="card-content">
         {{> afQuickField name="country"}}
         {{> afQuickField name="website"}}

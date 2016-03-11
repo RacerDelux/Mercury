@@ -24,11 +24,11 @@ Template.newUser.helpers({
     pagePercent: function () {
         return (Session.get('page') / Session.get('pageCount')) * 100;
     },
-    formType: function () {
-        return Session.get('docLoad');
+    formType: function (page) {
+        return Session.get('docLoad')[page];
     },
-    fetchForm: function () {
-        return Session.get('existingDoc');
+    fetchForm: function (page) {
+        return Session.get('existingDoc')[page];
     }
 });
 Template.newUser.events({
