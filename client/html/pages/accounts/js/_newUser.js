@@ -18,17 +18,17 @@ Template.newUser.helpers({
         console.log("I am used!");
         return Schema.NewUser;
     },
-    pageIs: function (p) {
-        return Session.get('page') == p;
+    pageIs: function (page) {
+      return getPageIs(page);
     },
     pagePercent: function () {
-        return (Session.get('page') / Session.get('pageCount')) * 100;
+      return getPagePercent();
     },
     formType: function (page) {
-        return Session.get('docLoad')[page];
+      return getFormType(page);
     },
     fetchForm: function (page) {
-        return Session.get('existingDoc')[page];
+      return getFetchForm(page);
     }
 });
 Template.newUser.events({

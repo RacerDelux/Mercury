@@ -142,3 +142,15 @@ CancelForm = function () {
 partialValidate = function () {
     return AutoForm.validateForm("FormNew" + capitalizeFirstLetter(Session.get("whatForm")) + "P" + Session.get('page'));
 };
+getFetchForm = function (page) {
+  return Session.get('existingDoc')[page];
+};
+getFormType = function (page) {
+  return Session.get('docLoad')[page];
+};
+getPagePercent = function (page) {
+  return (Session.get('page') / Session.get('pageCount')) * 100;
+};
+getPageIs = function (page) {
+  return Session.get('page') == page;
+};
