@@ -3,15 +3,7 @@
  *
  **/
 Template.newUser.onRendered(function() {
-  console.log("Made it to here");
-  Session.set('page', 1);
-  Session.set('pageCount', $(".page").length);
-  nextValid();
-  backValid();
-  console.log("Ok, you are good here");
-  if (this.subscriptionsReady()) {
-    toggleSpinner(false);
-  }
+  formRendered(this);
 });
 Template.newUser.helpers({
   newUserSchema: function() {

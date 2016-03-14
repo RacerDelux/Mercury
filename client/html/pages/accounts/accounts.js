@@ -100,6 +100,18 @@ formSubmit = function () {
   Meteor.call("formSave", type, formPages);
 };
 
+formRendered = function (theForm) {
+  console.log("Made it to here");
+  Session.set('page', 1);
+  Session.set('pageCount', $(".page").length);
+  nextValid();
+  backValid();
+  console.log("Ok, you are good here");
+  if (theForm.subscriptionsReady()) {
+    toggleSpinner(false);
+  }
+}
+
 /** Checks to see if the
  *   next page is valid
  **/
