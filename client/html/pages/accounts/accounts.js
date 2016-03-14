@@ -90,6 +90,16 @@ setUpForm = function (type) {
     }
 };
 
+formSubmit = function () {
+  type = Session.get("whatForm");
+  formPages = [];
+  $.each(new Array(Form[Session.get("whatForm")].length), function (index) {
+    formPages.push(Form[type][index].findOne({userId: Meteor.userId()}));
+  });
+
+  Meteor.call("formSave", type, formPages);
+};
+
 /** Checks to see if the
  *   next page is valid
  **/
